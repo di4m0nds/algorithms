@@ -28,6 +28,8 @@
   
   ➡ The behavior of strings is quite similar to that of normal arrays, with the difference that in most programming languages (except C++), strings are immutable. This means that once a string is created, it cannot be modified. As a result, simple operations such as adding new characters to a string can be more costly than one might expect.
 
+  > Example: Although creating a new string might itself be an $O(n)$ operation (depending on the implementation), performing it within the loop leads to the overall complexity becoming $O(n * n)$ which simplifies to $O(n^2)$ .
+
 ```python
 string = "This is a string"
 newString = ""
@@ -35,6 +37,4 @@ newString = ""
 for char in string:
     newString += char
 ```
-
-  > Example: Although creating a new string might itself be an $O(n)$ operation (depending on the implementation), performing it within the loop leads to the overall complexity becoming $O(n * n)$ which simplifies to $O(n^2)$ .
 
